@@ -2,5 +2,5 @@ package com.dakshay.scoreservices;
 
 public interface ScoreFactory {
 
-    public void updateScore(int run);
+    public void update(int run);
 }

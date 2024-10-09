@@ -13,7 +13,7 @@ public class NoBallRun implements ScoreFactory{
     }
 
     @Override
-    public void updateScore(int run) {
+    public void update(int run) {
         inningsStatistics.updateOverStats(run, BallType.NO_BALL);
     }
 }

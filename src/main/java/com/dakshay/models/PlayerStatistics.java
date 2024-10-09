@@ -8,7 +8,19 @@ public class PlayerStatistics {
     private int runs = 0;
     private int ballsPlayed;
     private boolean onStrike;
+    private int position;
     private PlayerStatus playerStatus;
+
+    public PlayerStatistics(Player playerId, int position) {
+        this.playerId = playerId;
+        this.fours = 0;
+        this.sixes = 0;
+        this.runs = 0;
+        this.ballsPlayed = 0;
+        this.onStrike = false;
+        this.position = position;
+        this.playerStatus = PlayerStatus.ABOUT_TO_PLAY;
+    }
 
     public Player getPlayerId() {
         return playerId;
@@ -59,4 +71,27 @@ public class PlayerStatistics {
     public void setOnStrike(boolean onStrike) {
         this.onStrike = onStrike;
     }
+
+    public void wicket() {
+        this.ballsPlayed+=1;
+        this.onStrike = false;
+        this.playerStatus = PlayerStatus.OUT;
+    }
+
+    public int getRuns() {
+        return runs;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public PlayerStatus getPlayerStatus() {
+        return playerStatus;
+    }
+
+    public void setPlayerStatus(PlayerStatus playerStatus) {
+        this.playerStatus = playerStatus;
+    }
+
 }

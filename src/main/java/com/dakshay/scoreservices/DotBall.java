@@ -17,7 +17,7 @@ public class DotBall implements ScoreFactory{
     }
 
     @Override
-    public void updateScore(int run) {
+    public void update(int run) {
         inningsStatistics.updateOverStats(run, BallType.DOT);
         List<PlayerStatistics> playerStatistics = inningsStatistics.getPlayerStatistics();
         Optional<PlayerStatistics> playerStatistic = playerStatistics.stream().filter(PlayerStatistics::isOnStrike).findFirst();

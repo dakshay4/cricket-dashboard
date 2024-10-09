@@ -13,7 +13,7 @@ public class WideRun implements ScoreFactory{
     }
 
     @Override
-    public void updateScore(int run) {
+    public void update(int run) {
         inningsStatistics.updateOverStats(run, BallType.WIDE);
 
     }
